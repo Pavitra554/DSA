@@ -40,6 +40,7 @@ public class Queue_array {
             if(rear == 0){
                 front = 0;
             }
+            s.close();
         }
 
 
@@ -79,5 +80,6 @@ public class Queue_array {
         System.out.print("Front --> ");
         q.display();
         System.out.print(" <--Rear");
+    
     }
 }

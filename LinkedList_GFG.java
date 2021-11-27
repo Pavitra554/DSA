@@ -252,7 +252,7 @@ public class LinkedList_GFG {
 //        list.reverseList(list.countNODE());//reversing
 //        list.printlist();//printing list
 
-
+        s.close();
 
 
 
