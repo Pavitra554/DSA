@@ -40,7 +40,6 @@ public class Queue_array {
             if(rear == 0){
                 front = 0;
             }
-            s.close();
         }
 
 
