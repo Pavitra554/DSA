@@ -50,10 +50,15 @@ public class shortest_Path_APPLICATION_BFS {
         int curr = des;
         int dis = 0;
         while(ans[curr]!=-1){
-            System.out.print(curr+" --> ");
+            System.out.print(curr+" --> ");//4 --> 3 --> 1 --> 0 --> -1 
             curr = ans[curr];
             dis++;
         }
+        //While loop
+        //1 -> ans[curr] = ans[4] = 3
+        //2 -> ans[curr] = ans[3] = 1
+        //3 -> ans[curr] = ans[1] = 0 
+        //3 -> ans[curr] = ans[0] = -1 loop ends
         System.out.println(src);
         System.out.println("\nShortest distance is "+dis);
     }
