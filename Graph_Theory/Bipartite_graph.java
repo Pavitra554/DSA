@@ -1,7 +1,5 @@
 package DATA_STRUCTURE.Graph_Theory;
 import java.util.*;
-
-
 public class Bipartite_graph {
     
     //for checking graph is bipartite or not 
@@ -41,7 +39,7 @@ public class Bipartite_graph {
                     return false;
             }
         }
-        
+
         return true;
     }
     public static void main(String[] args) {
