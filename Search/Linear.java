@@ -6,6 +6,7 @@ public class Linear {
 
     static String linearSearch(int []arr,int n){
         for (int i = 0; i < arr.length; i++) {
+            //checking target with every element
             if(n == arr[i]){
                 return "Index is " + i;
             }
@@ -14,12 +15,19 @@ public class Linear {
     }
     public static void main(String[] args) {
         //Linear Search Algorithm
-        //O(n)
+        //Time -> O(n)
+        //Space ->  O(1)
         Scanner s =  new Scanner(System.in);
-        int[] arr = { 1, 2, 3, 45, 6, 7, 9, 5};
-        System.out.println("Enter which element location you want to check : ");
+        System.out.println("Enter total no of elements in array : ");
         int n = s.nextInt();
-        System.out.println(linearSearch(arr, n));
+        int[] arr = new int[n];
+        System.out.println("Enter array elements one by one ...");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = s.nextInt();
+        }
+        System.out.println("Enter which element location you want to check : ");
+        int target = s.nextInt();
+        System.out.println(linearSearch(arr, target));
         
         s.close();
     }
