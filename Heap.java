@@ -18,14 +18,14 @@ public class Heap {
 
         int largest = i;
 
-        if(left <= arr.length && arr[left]>arr[largest]){
+        if(left <= arr.length-1 && arr[left]>arr[largest]){
             largest = left;
         }
         else{
             largest = i;
         }
 
-        if(right <= arr.length && arr[right]>arr[largest]){
+        if(right <= arr.length-1 && arr[right]>arr[largest]){
             largest = right;
         }
         else{
@@ -72,8 +72,8 @@ public class Heap {
             arr[i] = s.nextInt();
         }
 
-        // HEAPFY(arr,0);
-        MAX_HEAP(arr);
+        HEAPFY(arr,0);
+        // MAX_HEAP(arr);
         PrintHeap(arr);
         System.out.println(Arrays.toString(arr));
 
