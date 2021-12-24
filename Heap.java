@@ -28,6 +28,8 @@ public class Heap {
 
     //Function for heap property
     static void MAX_HEAPFY(int []arr,int i){
+        //Time = O(Log n)
+        //Space = O(1)
         int left =left(i); //left child
         int right = right(i); // right child
 
