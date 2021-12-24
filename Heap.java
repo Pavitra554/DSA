@@ -4,21 +4,37 @@ import java.util.*;
 
 public class Heap {
  
-    //ERROR! this is not working.
+    //This function gives the paraent of an node if exists
+    static int parent(int i){
+        return (i/2);
+    }
 
-    static void MAX_HEAP(int arr[]){
-        for (int i = (arr.length) / 2; i >= 0 ; i--) {
-            HEAPFY(arr, i);
+    //This function gives the left child of an node if exists
+    static int left(int i){
+        return 2*i+1;
+    }
+        
+    //This function gives the right child of an node if exists
+    static int right(int i){
+        return 2*i+2;
+    }
+
+    //Function for buliding max heap
+    static void BUILD_MAX_HEAPFY(int arr[]){
+        for (int i = arr.length/2; i>=0; i--) {
+            MAX_HEAPFY(arr, i);
         }
     }
 
-    static void HEAPFY(int []arr,int i){
-        int left = 2*i+1;
-        int right = 2*i+2;
+    //Function for heap property
+    static void MAX_HEAPFY(int []arr,int i){
+        int left =left(i); //left child
+        int right = right(i); // right child
 
         int largest = i;
 
-        if(left <= arr.length-1 && arr[left]>arr[largest]){
+        if(left <= arr.length-1 && arr[left]>arr[i]){ 
+            //checking if the parent is less than or grater than left child
             largest = left;
         }
         else{
@@ -26,35 +42,36 @@ public class Heap {
         }
 
         if(right <= arr.length-1 && arr[right]>arr[largest]){
+            //checking if the parent is less than or grater than right child
             largest = right;
         }
-        else{
-            largest = i;
-        }
-
         if(largest != i){
+            //if parent is not the largest than swaping parent with largest
             int temp = arr[i];
             arr[i] = arr[largest];
             arr[largest] = temp; 
-            HEAPFY(arr, largest);
+
+            //againg max_heapfy for the largest node
+            MAX_HEAPFY(arr, largest);
         }
     }
-
    
-
+    //for printing heap 
     static void PrintHeap(int []arr){
+
         for(int j=0;j<arr.length/2;j++){
+            //loop is till length/2 because we are printing 3 element at a time
             int left  = 2*j+1;
             int right = 2*j+2;
             System.out.print("Parent Node : " + arr[j]);
              
-            if(left<arr.length) //if the child is out of the bound of the array
+            if(left<arr.length) 
                System.out.print( " Left Child Node: " + arr[left]);
              
-            if(right<arr.length) //if the right child index must not be out of the index of the array
+            if(right<arr.length) 
                 System.out.print(" Right Child Node: "+ arr[right]);
              
-                System.out.println(); //for new line
+                System.out.println(); 
              
         }
     }
@@ -72,9 +89,13 @@ public class Heap {
             arr[i] = s.nextInt();
         }
 
-        HEAPFY(arr,0);
-        // MAX_HEAP(arr);
+        // MAX_HEAPFY(arr,0);
+        BUILD_MAX_HEAPFY(arr);
+
+        //Printing heap
         PrintHeap(arr);
+
+        //Printing array
         System.out.println(Arrays.toString(arr));
 
 
