@@ -1,9 +1,8 @@
-package DATA_STRUCTURE;
+package DATA_STRUCTURE.Sort;
 
 import java.util.*;
 
-public class Heap {
- 
+public class headSort {
     //This function gives the paraent of an node if exists
     static int parent(int i){
         return (i/2);
@@ -18,18 +17,18 @@ public class Heap {
     static int right(int i){
         return 2*i+2;
     }
-
+    
     //Function for buliding max heap
     static void BUILD_MAX_HEAPFY(int arr[]){
         //Time = O(n)
         //Space = O(1)
         for (int i = arr.length/2; i>=0; i--) {
-            MAX_HEAPFY(arr, i);
+            MAX_HEAPFY(arr ,arr.length, i);
         }
     }
 
     //Function for heap property
-    static void MAX_HEAPFY(int []arr,int i){
+    static void MAX_HEAPFY(int []arr,int n,int i){
         //Time = O(Log n)
         //Space = O(1)
         int left =left(i); //left child
@@ -37,7 +36,7 @@ public class Heap {
 
         int largest = i;
 
-        if(left <= arr.length-1 && arr[left]>arr[i]){ 
+        if(left < n && arr[left]>arr[i]){ 
             //checking if the parent is less than or grater than left child
             largest = left;
         }
@@ -45,7 +44,7 @@ public class Heap {
             largest = i;
         }
 
-        if(right <= arr.length-1 && arr[right]>arr[largest]){
+        if(right < n && arr[right]>arr[largest]){
             //checking if the parent is less than or grater than right child
             largest = right;
         }
@@ -56,7 +55,7 @@ public class Heap {
             arr[largest] = temp; 
 
             //againg max_heapfy for the largest node
-            MAX_HEAPFY(arr, largest);
+            MAX_HEAPFY(arr,n,largest);
         }
     }
    
@@ -79,6 +78,29 @@ public class Heap {
              
         }
     }
+
+
+    //Heap Sort
+    static void HeapSort(int arr[]){
+        //Time = O(n*log n )
+        //Space = O(1)
+
+
+        BUILD_MAX_HEAPFY(arr);
+        //For bulding max heapfy
+
+        for (int i = arr.length-1; i > 0; i--) {
+            //Exchanging root element with last element
+
+            int temp  = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+
+            //calling max heapfy for total size - 1 so that it will ignore the last  element which is the largest.
+            MAX_HEAPFY(arr,i, 0);
+        }
+
+    }
     public static void main(String[] args) {
         Scanner s =  new Scanner(System.in);
         
@@ -94,7 +116,11 @@ public class Heap {
         }
 
         // MAX_HEAPFY(arr,0);
-        BUILD_MAX_HEAPFY(arr);
+        // BUILD_MAX_HEAPFY(arr);
+
+        //Heap Sort function
+        HeapSort(arr);
+
 
         //Printing Heap
         PrintHeap(arr);
