@@ -20,7 +20,7 @@ public class headSort {
     
     //Function for buliding max heap
     static void BUILD_MAX_HEAPFY(int arr[]){
-        //Time = O(Log n)
+        //Time = O(n)
         //Space = O(1)
         for (int i = arr.length/2; i>=0; i--) {
             MAX_HEAPFY(arr ,arr.length, i);
