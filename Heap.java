@@ -92,7 +92,7 @@ public class Heap {
         // MAX_HEAPFY(arr,0);
         BUILD_MAX_HEAPFY(arr);
 
-        //Printing heap
+        //Printing Heap
         PrintHeap(arr);
 
         //Printing array
