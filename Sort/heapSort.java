@@ -2,7 +2,7 @@ package DATA_STRUCTURE.Sort;
 
 import java.util.*;
 
-public class headSort {
+public class heapSort {
     //This function gives the paraent of an node if exists
     static int parent(int i){
         return (i/2);
