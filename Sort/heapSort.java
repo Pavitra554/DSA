@@ -118,12 +118,14 @@ public class heapSort {
         // MAX_HEAPFY(arr,0);
         // BUILD_MAX_HEAPFY(arr);
 
-        //Heap Sort function
-        HeapSort(arr);
-
+        
 
         //Printing Heap
         PrintHeap(arr);
+
+        //Heap Sort function
+        HeapSort(arr);
+
 
         //Printing array
         System.out.println(Arrays.toString(arr));
