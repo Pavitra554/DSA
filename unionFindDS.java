@@ -6,7 +6,6 @@ public class unionFindDS {
     static int n = 8;
     static int [] parent = new int[n];
     static int [] rank = new int[n];
-    static int [] size = new int[n];
 
     static void makeSet(){
         for (int i = 0; i < parent.length; i++) {
@@ -24,9 +23,13 @@ public class unionFindDS {
         }
     }
 
-    static boolean Union(int x,int y){
+    static void Union(int x,int y){
         x = FIND(x);
         y = FIND(y);
+        if(x == y){
+            return;
+        }
+
         if(rank[x]<rank[y]){
             parent[x] = y;
         }
@@ -35,18 +38,24 @@ public class unionFindDS {
         }else{
             parent[y] =x;
             rank[x]++;
-            return true;
+            return;
         }
-        return false;
     }
 
     public static void main(String[] args) {
         makeSet();
-        if(Union(6,7)){
-            System.out.println("same set");
-        }
-        else{
-            System.out.println("no");
-        }
+        Union(0, 2);
+        Union(4, 2);
+        Union(3, 1);
+        if (FIND(4) == FIND(0))
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+  
+        // Check if 1 is a friend of 0
+        if (FIND(1) == FIND(0))
+            System.out.println("Yes");
+        else
+            System.out.println("No");
     }
 }
