@@ -3,7 +3,9 @@ package DATA_STRUCTURE;
 import java.util.*;
 
 public class unionFindDS {
-    static int n = 8;
+    //Union Find DataStructure 
+    //Disjoint set
+    static int n = 6;
     static int [] parent = new int[n];
     static int [] rank = new int[n];
 
@@ -44,10 +46,10 @@ public class unionFindDS {
 
     public static void main(String[] args) {
         makeSet();
-        Union(0, 2);
-        Union(4, 2);
-        Union(3, 1);
-        if (FIND(4) == FIND(0))
+        Union(0, 3);
+        Union(3, 5);
+        Union(1, 2);
+        if (FIND(5) == FIND(0))
             System.out.println("Yes");
         else
             System.out.println("No");
