@@ -1,6 +1,7 @@
 package DATA_STRUCTURE;
 import java.util.Scanner;
 public class Queue_array {
+    Scanner s = new Scanner(System.in);
     static final int max = 5;               //FIRST IN FIRST OUT FIFO
     int rear = -1;
     int front  = -1;
@@ -32,7 +33,6 @@ public class Queue_array {
             return;
         }
         else{
-            Scanner s = new Scanner(System.in);
             System.out.println("Enter element");
             int e = s.nextInt();
             rear++;
@@ -79,6 +79,7 @@ public class Queue_array {
         System.out.print("Front --> ");
         q.display();
         System.out.print(" <--Rear");
+        
     
     }
 }

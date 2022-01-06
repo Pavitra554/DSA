@@ -1,6 +1,5 @@
 package DATA_STRUCTURE;
 
-import java.util.*;
 
 public class unionFindDS {
     //Union Find DataStructure 
