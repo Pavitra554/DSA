@@ -3,6 +3,10 @@ package DATA_STRUCTURE.Graph_Theory;
 import java.util.*;
 
 public class Kruskals_MST {
+    //Kruskal's Algorithm 
+    //Time -> O(E log V)
+    //space O(E + V)
+
     int v; // no of vertices
     int e;// no of edges
     Edge edge[]; //Array of object of Edge class which contains source,destination and weight

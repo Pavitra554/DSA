@@ -2,6 +2,10 @@ package DATA_STRUCTURE.Graph_Theory;
 
 import java.util.*;
 public class Prims_MST {
+    //Prim's Algorithm 
+    //Time ->O(V^2)
+    //space O( V + E )
+
     //Matrix representation of graph
     static int [][]graph;
     //Array for storing MST 
@@ -65,6 +69,7 @@ public class Prims_MST {
                 }
             }
         }
+        // System.out.println(Arrays.toString(key));
     }
 
     //Printing the minimum spanning tree
@@ -78,6 +83,8 @@ public class Prims_MST {
         }
         //printing totale weight of minimum spanning tree 
         System.out.println("Total weight : "+totalWeigth);
+
+        // System.out.println(Arrays.toString(parent));
     }
 
     //Printing matrix of graph
