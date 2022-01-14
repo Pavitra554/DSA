@@ -2,6 +2,11 @@ package DATA_STRUCTURE.Graph_Theory;
 
 import java.util.*;
 
+//Name - Pavitra Behara
+//Regd.No - 2041002041
+//Section - CSE-D
+//Title of the program - Depth First Search
+
 public class Graph_DFS_rec {
     //Global nested ArrayList
     static ArrayList< ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();

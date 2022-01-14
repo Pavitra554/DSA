@@ -1,6 +1,12 @@
 package DATA_STRUCTURE.Graph_Theory;
 
 import java.util.*;
+
+//Name - Pavitra Behara
+//Regd.No - 2041002041
+//Section - CSE-D
+//Title of the program - Prims's Minimum Spanning Tree
+
 public class Prims_MST {
     //Prim's Algorithm 
     //Time ->O(V^2)

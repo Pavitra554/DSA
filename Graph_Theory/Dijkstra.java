@@ -1,6 +1,12 @@
 package DATA_STRUCTURE.Graph_Theory;
 
 import java.util.*;
+
+//Name - Pavitra Behara
+//Regd.No - 2041002041
+//Section - CSE-D
+//Title of the program - Dijkstra Algorithm
+
 public class Dijkstra {
     //Dijkstra Algorithm 
     //Time ->O(V^2) if we use priority queue then its O(E log V)

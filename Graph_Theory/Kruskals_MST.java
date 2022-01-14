@@ -2,6 +2,11 @@ package DATA_STRUCTURE.Graph_Theory;
 
 import java.util.*;
 
+//Name - Pavitra Behara
+//Regd.No - 2041002041
+//Section - CSE-D
+//Title of the program - Kruskal's Minimum Spanning Tree
+
 public class Kruskals_MST {
     //Kruskal's Algorithm 
     //Time -> O(E log V)
