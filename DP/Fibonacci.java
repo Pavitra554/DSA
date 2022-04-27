@@ -23,5 +23,6 @@ public class Fibonacci {
         System.out.println("Enter nummber : ");
         int n = s.nextInt();
         System.out.println(n + " Fibonacci number is " + fib(n));
+        s.close();
     }
 }
