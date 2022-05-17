@@ -26,7 +26,7 @@ public class Counting_Sort {
         }
 
         // Important Loop
-        System.out.println(Arrays.toString(count)); // Modified count array [0,3,7,8]
+        // System.out.println(Arrays.toString(count)); // Modified count array [0,3,7,8]
 
         for (int i = 0; i < arr.length; i++) {
             sort[count[arr[i]] - 1] = arr[i];
@@ -35,7 +35,7 @@ public class Counting_Sort {
         for (int i = 0; i < sort.length; i++) {
             arr[i] = sort[i];
         }
-        System.out.println(Arrays.toString(count)); // Final count array [0,0,3,7]
+        // System.out.println(Arrays.toString(count)); // Final count array [0,0,3,7]
 
     }
 
