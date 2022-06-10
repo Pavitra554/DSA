@@ -39,6 +39,6 @@ public class Zero_By_One_Knapsack {
         int w[] = { 3, 2, 5, 4 }; // Weights
         int p[] = { 10, 8, 12, 9 };// profits
         int C = 8;// Capacity
-        System.out.println("Maximum profit is " + maxProfit(w, p, w.length, C));
+        System.out.println("Maximum profit :" + maxProfit(w, p, w.length, C));
     }
 }
