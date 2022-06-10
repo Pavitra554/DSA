@@ -42,7 +42,6 @@ public class MatrixChainMultiplication {
     public static void main(String[] args) {
         int arr[] = new int[] { 1, 2, 3, 4 };
         int size = arr.length;
-
         System.out.println("Minimum number of multiplications is " + MatrixChain(arr, size));
     }
 }
