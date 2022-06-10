@@ -33,7 +33,7 @@ public class WeightedIntervalScheduling {
             for (int j = i - 1; j >= 0; j--) {
                 if (jobs.get(j).end <= jobs.get(i).start) {
                     p[i] = i - 1;
-                    break;
+                    // break;
                 }
             }
         }
