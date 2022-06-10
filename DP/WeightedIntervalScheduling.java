@@ -28,6 +28,7 @@ public class WeightedIntervalScheduling {
         int M[] = new int[jobs.size() + 1];
 
         int p[] = new int[jobs.size()];
+        p[0] = 0;
         for (int i = 1; i < jobs.size(); i++) {
 
             for (int j = i - 1; j >= 0; j--) {
@@ -56,7 +57,7 @@ public class WeightedIntervalScheduling {
         jobs.add(new job(1, 7, 30));
         jobs.add(new job(2, 5, 50));
 
-        System.out.println("Maximum profit" + maxProfit(jobs));
+        System.out.println("Maximum profit " + maxProfit(jobs));
 
         // for (job e : jobs) {
         // System.out.println(e.start + " " + e.end + " " + e.p);
